@@ -1,0 +1,27 @@
+# Maven and other build outputs
+target/
+build/
+out/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.factorypath
+.metadata/
+
+# Editor and operating system temporary files
+*.swp
+*.swo
+*~
+*.tmp
+.DS_Store
+Thumbs.db
+*.log
