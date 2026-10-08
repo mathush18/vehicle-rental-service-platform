@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 1 - USER MODULE CSS
+Prepared for future User Management frontend.
+Do not complete user pages in this shared UI task.
+=========================================
+*/
+
+.user-module {
+    display: grid;
+    gap: 18px;
+}

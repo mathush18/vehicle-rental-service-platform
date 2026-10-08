@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 5 - BRANCH FRONTEND
+Member 5 must complete this module.
+Use the shared design system from Member 1.
+=========================================
+*/
+
+.branch-module {
+    display: grid;
+    gap: 18px;
+}

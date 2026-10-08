@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 6 - REVIEW FRONTEND
+Member 6 must complete this module.
+Use the shared design system from Member 1.
+=========================================
+*/
+
+.review-module {
+    display: grid;
+    gap: 18px;
+}

@@ -1,11 +1,9 @@
 <%--
-    =========================================
-    MEMBER 6 - SHARED FRONTEND / UI
-    Shared component used by all members.
-    Coordinate with the full team before
-    making major visual changes.
-    =========================================
+=========================================
+MEMBER 1 - SHARED MESSAGES
+Future success, error, warning, and info messages.
+=========================================
 --%>
 <div class="messages" role="status" aria-live="polite">
-    <%-- Future success, error, and information messages. --%>
+    <%-- Dynamic flash messages will be displayed here later. --%>
 </div>

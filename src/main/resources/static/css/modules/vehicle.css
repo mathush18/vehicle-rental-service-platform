@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 2 - VEHICLE MANAGEMENT FRONTEND
+Member 2 must complete this module.
+Use the shared design system from Member 1.
+=========================================
+*/
+
+.vehicle-module {
+    display: grid;
+    gap: 18px;
+}

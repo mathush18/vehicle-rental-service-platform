@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 3 - RENTAL / BOOKING FRONTEND
+Member 3 must complete this module.
+Use the shared design system from Member 1.
+=========================================
+*/
+
+.rental-module {
+    display: grid;
+    gap: 18px;
+}

@@ -1,0 +1,12 @@
+/*
+=========================================
+MEMBER 4 - PAYMENT FRONTEND
+Member 4 must complete this module.
+Use the shared design system from Member 1.
+=========================================
+*/
+
+.payment-module {
+    display: grid;
+    gap: 18px;
+}
