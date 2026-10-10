@@ -1,0 +1,3 @@
+   U001|Admin User|admin@driverent.lk|0771111111|admin123|ADMIN|Operations
+   U002|Nimal Perera|nimal@mail.com|0772222222|nimal123|CUSTOMER|B1234567
+   U003|Kasun Silva|kasun@mail.com|0773333333|kasun123|CUSTOMER|B7654321
