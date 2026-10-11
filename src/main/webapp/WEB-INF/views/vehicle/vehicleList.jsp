@@ -1,4 +1,4 @@
-<%-- MEMBER 2: Frontend-only Vehicle Management preview. No routes or persistence. --%>
+<%-- MEMBER 2: Vehicle Management frontend preview. No persistence. --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
