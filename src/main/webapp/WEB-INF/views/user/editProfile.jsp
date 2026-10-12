@@ -1,15 +1,5 @@
-<%--
-    =========================================
-    MEMBER 1 - USER MANAGEMENT
-    Page: Edit Profile
-    Responsible for (future work):
-    - User registration
-    - Login
-    - User profile
-    - User CRUD functionality
-    =========================================
---%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,16 +16,47 @@
 <body>
     <%@ include file="../common/navbar.jsp" %>
     <%@ include file="../common/sidebar.jsp" %>
-    <main class="app-main page-content" id="main-content">
+    <main class="app-main page-content user-module" id="main-content">
         <h1>Edit Profile</h1>
-        <%@ include file="../common/messages.jsp" %>
-        <section>
-            <h2>Profile edit form area</h2>
-            <%-- MEMBER 1: Future profile edit form area placeholder. --%>
-        </section>
-        <section>
-            <h2>Save and cancel controls area</h2>
-            <%-- MEMBER 1: Future save and cancel controls area placeholder. --%>
+        <%@ include file="userAlerts.jsp" %>
+        <section class="card user-form-card">
+            <form action="${pageContext.request.contextPath}/profile/edit" method="post" class="user-form">
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input class="form-control" type="text" id="name" name="name" value="<c:out value='${profile.name}'/>" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email" value="<c:out value='${profile.email}'/>" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (digits only)</label>
+                    <input class="form-control" type="tel" id="phone" name="phone" value="<c:out value='${profile.phone}'/>"
+                           pattern="\d{9,12}" title="9 to 12 digits" required>
+                </div>
+                <c:choose>
+                    <c:when test="${profile.userRole == 'ADMIN'}">
+                        <div class="form-group">
+                            <label for="extra">Department</label>
+                            <input class="form-control" type="text" id="extra" name="extra" value="<c:out value='${profile.department}'/>" required>
+                        </div>
+                    </c:when>
+                    <c:otherwise>
+                        <div class="form-group">
+                            <label for="extra">Driving licence number</label>
+                            <input class="form-control" type="text" id="extra" name="extra" value="<c:out value='${profile.licenseNumber}'/>" required>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
+                <div class="form-group">
+                    <label for="newPassword">New password (leave blank to keep the current one)</label>
+                    <input class="form-control" type="password" id="newPassword" name="newPassword" minlength="6">
+                </div>
+                <div class="form-actions">
+                    <a class="btn btn-outline" href="${pageContext.request.contextPath}/profile">Cancel</a>
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-check2" aria-hidden="true"></i> Save changes</button>
+                </div>
+            </form>
         </section>
     </main>
     <%@ include file="../common/footer.jsp" %>
