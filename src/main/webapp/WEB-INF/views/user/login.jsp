@@ -1,15 +1,5 @@
-<%--
-    =========================================
-    MEMBER 1 - USER MANAGEMENT
-    Page: Login
-    Responsible for (future work):
-    - User registration
-    - Login
-    - User profile
-    - User CRUD functionality
-    =========================================
---%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,16 +16,32 @@
 <body>
     <%@ include file="../common/navbar.jsp" %>
     <%@ include file="../common/sidebar.jsp" %>
-    <main class="app-main page-content" id="main-content">
+    <main class="app-main page-content user-module" id="main-content">
         <h1>Login</h1>
-        <%@ include file="../common/messages.jsp" %>
-        <section>
-            <h2>Login form area</h2>
-            <%-- MEMBER 1: Future login form area placeholder. --%>
-        </section>
-        <section>
-            <h2>Registration link area</h2>
-            <%-- MEMBER 1: Future registration link area placeholder. --%>
+        <p>Welcome back. Sign in to manage your rentals and profile.</p>
+        <c:if test="${param.loggedOut != null}">
+            <div class="user-alert user-alert-success" role="status"><i class="bi bi-check-circle" aria-hidden="true"></i><span>You have been logged out.</span></div>
+        </c:if>
+        <c:if test="${param.deleted != null}">
+            <div class="user-alert user-alert-success" role="status"><i class="bi bi-check-circle" aria-hidden="true"></i><span>Your account was deleted.</span></div>
+        </c:if>
+        <%@ include file="userAlerts.jsp" %>
+        <section class="card user-form-card">
+            <form action="${pageContext.request.contextPath}/login" method="post" class="user-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email"
+                           value="<c:out value='${email}'/>" placeholder="you@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" id="password" name="password" required>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Login</button>
+                </div>
+            </form>
+            <p class="small-text user-form-note">New here? <a class="user-link" href="${pageContext.request.contextPath}/register">Create an account</a></p>
         </section>
     </main>
     <%@ include file="../common/footer.jsp" %>
