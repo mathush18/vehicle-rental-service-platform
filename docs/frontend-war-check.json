@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "java": "21",
+  "packaging": "executable WAR",
+  "contextPath": "/drivehub",
+  "routes": 41,
+  "compatibilityRoutes": 9,
+  "browserErrors": []
+}

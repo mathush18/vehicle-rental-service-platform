@@ -1,3 +1,17 @@
+# DriveHub — Vehicle Rental Service
+
+The complete Task 1 frontend is available in this Spring Boot / JSP / Java 21 / Maven WAR project.
+
+- Start with `./mvnw.cmd spring-boot:run` on Windows with JDK 21 selected.
+- Open http://localhost:8080/login, then choose Customer, Vehicle Owner or Admin.
+- Read [the complete Task 1 handoff](FRONTEND-TASK1.md) for all pages, routes, changed files, verification and backend integration notes.
+- This role-based UI uses frontend sample data. Saving, login, booking, payment and moderation actions are previews.
+- The original backend/member files are preserved; no Git operation or data-file update was performed.
+
+---
+
+The following scaffold notes are historical and describe the earlier project stage. The handoff above is the current implementation reference.
+
 # Vehicle Rental Service Platform
 
 University team project: structure only. Planned stack: Java 21, Spring Boot,

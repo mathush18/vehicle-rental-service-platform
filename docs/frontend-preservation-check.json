@@ -1,0 +1,17 @@
+{
+  "changed": [
+    "BUILD.md",
+    "README.md",
+    "src\\main\\java\\com\\vehiclerental\\controller\\UserController.java",
+    "src\\main\\java\\com\\vehiclerental\\controller\\VehicleController.java",
+    "src\\main\\resources\\static\\js\\app.js",
+    "src\\main\\webapp\\WEB-INF\\views\\common\\footer.jsp",
+    "src\\main\\webapp\\WEB-INF\\views\\common\\messages.jsp",
+    "src\\main\\webapp\\WEB-INF\\views\\common\\navbar.jsp",
+    "src\\main\\webapp\\WEB-INF\\views\\common\\sidebar.jsp"
+  ],
+  "missing": [],
+  "dataFilesUnchanged": true,
+  "configUnchanged": true,
+  "modelsAndServicesUnchanged": true
+}

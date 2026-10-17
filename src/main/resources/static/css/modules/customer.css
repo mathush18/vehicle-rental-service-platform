@@ -1,0 +1,4 @@
+/* Customer-specific adjustments; shared components live in frontend.css. */
+.role-customer .dashboard-hero { min-height: 218px; }
+.role-customer .vehicle-detail { padding: 24px; }
+@media (max-width: 600px) { .role-customer .vehicle-detail { padding: 17px; } }

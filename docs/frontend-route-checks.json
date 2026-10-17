@@ -1,0 +1,992 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/dashboard",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/dashboard",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/dashboard",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles/details",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/details",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/details",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/add",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/edit",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/add",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/edit",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/create",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/confirmation",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/details",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/rental-requests",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/rentals",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/payments",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/payments",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/payments",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/earnings",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/add",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/edit",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/branches",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/profile",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/profile",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/profile",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/users",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/add",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/edit",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/details",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reviews",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reports",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/login",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/register",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/instructions",
+      "width": 1440,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/dashboard",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/dashboard",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/dashboard",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles/details",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/details",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/details",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/add",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/edit",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/add",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/edit",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/create",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/confirmation",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/details",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/rental-requests",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/rentals",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/payments",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/payments",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/payments",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/earnings",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/add",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/edit",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/branches",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/profile",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/profile",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/profile",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/users",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/add",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/edit",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/details",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reviews",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reports",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/login",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/register",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/instructions",
+      "width": 1024,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/dashboard",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/dashboard",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/dashboard",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles/details",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/details",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/details",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/add",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/edit",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/add",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/edit",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/create",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/confirmation",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/details",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/rental-requests",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/rentals",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/payments",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/payments",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/payments",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/earnings",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/add",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/edit",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/branches",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/profile",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/profile",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/profile",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/users",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/add",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/edit",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/details",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reviews",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reports",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/login",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/register",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/instructions",
+      "width": 768,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/dashboard",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/dashboard",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/dashboard",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/vehicles/details",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/details",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/details",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/add",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/vehicles/edit",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/add",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/vehicles/edit",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/create",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/confirmation",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/rentals/details",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/rental-requests",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/rentals",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/payments",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/payments",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/payments",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/earnings",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/add",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/reviews/edit",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/branches",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/customer/profile",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/owner/profile",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/profile",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/users",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/add",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/edit",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/branches/details",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reviews",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/admin/reports",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/login",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/register",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    },
+    {
+      "route": "/instructions",
+      "width": 390,
+      "status": 200,
+      "issues": []
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "linksChecked": 104,
+  "assetsChecked": 12
+}

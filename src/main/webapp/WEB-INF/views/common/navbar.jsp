@@ -1,33 +1,10 @@
-<%--
-=========================================
-MEMBER 1 - SHARED TOP NAVBAR
-Placeholder UI only. Authentication comes later.
-=========================================
---%>
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:if test="${empty uiRole}"><c:set var="uiRole" value="customer" scope="request"/></c:if>
 <header class="top-navbar">
-    <div class="navbar-left">
-        <button class="btn btn-outline btn-icon menu-toggle" type="button" data-sidebar-toggle aria-label="Open navigation">
-            <i class="bi bi-list" aria-hidden="true"></i>
-        </button>
-        <form class="search-box" action="#" role="search">
-            <i class="bi bi-search search-icon" aria-hidden="true"></i>
-            <label class="sr-only" for="globalSearch">Search</label>
-            <input class="form-control" id="globalSearch" type="search" placeholder="Search vehicles, locations...">
-        </form>
-    </div>
-
-    <div class="navbar-right">
-        <button class="btn btn-outline btn-icon notification-button" type="button" aria-label="Notifications">
-            <i class="bi bi-bell" aria-hidden="true"></i>
-            <span class="notification-badge">3</span>
-        </button>
-        <button class="navbar-user" type="button" data-user-menu aria-expanded="false">
-            <span class="avatar"><i class="bi bi-person-circle" aria-hidden="true"></i></span>
-            <span class="navbar-user-copy">
-                <span class="user-name">Mathushalini</span>
-                <span class="user-role">Customer</span>
-            </span>
-            <i class="bi bi-chevron-down" aria-hidden="true"></i>
-        </button>
-    </div>
+ <div class="navbar-left"><button class="btn btn-icon menu-toggle" type="button" data-sidebar-toggle aria-label="Toggle navigation" aria-controls="appSidebar" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button>
+ <form class="search-box" role="search" action="${pageContext.request.contextPath}/${uiRole}/${uiRole == 'admin' ? 'users' : 'vehicles'}" data-global-search><label class="sr-only" for="globalSearch">Search ${uiRole == 'admin' ? 'users, vehicles, rentals' : 'vehicles, locations'}</label><i class="bi bi-search" aria-hidden="true"></i><input class="form-control" id="globalSearch" name="q" type="search" placeholder="Search ${uiRole == 'admin' ? 'users, vehicles, rentals' : 'vehicles, locations'}..."></form></div>
+ <div class="navbar-right"><div class="dropdown"><button class="btn btn-icon notification-button" type="button" data-dropdown="notifications" aria-expanded="false" aria-controls="notifications" aria-label="Notifications"><i class="bi bi-bell" aria-hidden="true"></i><span class="notification-dot"></span></button><div id="notifications" class="dropdown-panel" hidden><h3>Notifications</h3><p>No new notifications.</p><a href="${pageContext.request.contextPath}/${uiRole}/dashboard">Back to your dashboard</a></div></div>
+ <div class="dropdown"><button class="navbar-user" type="button" data-dropdown="user-menu" aria-controls="user-menu" aria-expanded="false"><span class="avatar"><i class="bi bi-person-fill" aria-hidden="true"></i></span><span class="navbar-user-copy"><span class="user-name">Mathushalini.T</span><span class="user-role">${uiRole == 'admin' ? 'Administrator' : uiRole == 'owner' ? 'Vehicle Owner' : 'Customer'}</span></span><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+ <div id="user-menu" class="dropdown-panel" hidden><strong>Mathushalini.T</strong><a href="${pageContext.request.contextPath}/${uiRole}/profile"><i class="bi bi-person" aria-hidden="true"></i> My Profile</a><a href="${pageContext.request.contextPath}/instructions"><i class="bi bi-book" aria-hidden="true"></i> User Guide</a><a href="${pageContext.request.contextPath}/login"><i class="bi bi-box-arrow-right" aria-hidden="true"></i> Back to Login</a></div></div></div>
 </header>

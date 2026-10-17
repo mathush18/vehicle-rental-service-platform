@@ -1,9 +1,3 @@
-<%--
-=========================================
-MEMBER 1 - SHARED MESSAGES
-Future success, error, warning, and info messages.
-=========================================
---%>
-<div class="messages" role="status" aria-live="polite">
-    <%-- Dynamic flash messages will be displayed here later. --%>
-</div>
+<%@ page pageEncoding="UTF-8" %>
+<div id="ui-feedback" class="sr-only" role="status" aria-live="polite"></div>
+<dialog class="ui-dialog" id="action-dialog" aria-labelledby="dialog-title"><div class="section-header"><h2 id="dialog-title">Details</h2><button type="button" class="btn btn-icon" data-close-dialog aria-label="Close dialog"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div id="dialog-content"></div><div class="form-actions"><button type="button" class="btn btn-secondary" data-close-dialog>Close</button><button type="button" class="btn btn-primary" id="dialog-confirm" hidden>Confirm</button></div></dialog>

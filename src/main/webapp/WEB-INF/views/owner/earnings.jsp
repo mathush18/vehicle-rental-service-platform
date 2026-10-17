@@ -1,0 +1,22 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" session="false" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="uiRole" value="owner" scope="request"/>
+<c:set var="pageTitle" value="Earnings & Payments" scope="request"/>
+<c:set var="navKey" value="earnings" scope="request"/>
+<!DOCTYPE html>
+<html lang="en"><head><%@ include file="../common/head.jsp" %></head>
+<body class="drivehub role-owner" data-role="owner" data-context="${pageContext.request.contextPath}" data-page="earnings">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<%@ include file="../common/sidebar.jsp" %>
+<%@ include file="../common/navbar.jsp" %>
+<main class="app-main page-content" id="main-content">
+<%-- FRONTEND MOCK DATA: replace with backend model/JSTL later --%>
+<header class="page-header"><div class="page-heading"><i class="bi bi-wallet2" aria-hidden="true"></i><div><h1>Earnings &amp; Payments</h1><p>Track your rental earnings and payment history.</p></div></div></header><section class="stats-grid" aria-label="Summary statistics"><article class="stat-card"><span class="stat-icon blue"><i class="bi bi-cash-stack" aria-hidden="true"></i></span><div><h3>Total Earnings</h3><strong>Rs. 1,250,000</strong><p>All time</p></div></article><article class="stat-card"><span class="stat-icon green"><i class="bi bi-wallet2" aria-hidden="true"></i></span><div><h3>This Month</h3><strong>Rs. 245,000</strong><p>October 2026</p></div></article><article class="stat-card"><span class="stat-icon purple"><i class="bi bi-check-circle" aria-hidden="true"></i></span><div><h3>Completed Rentals</h3><strong>5</strong><p>Completed rentals</p></div></article><article class="stat-card"><span class="stat-icon yellow"><i class="bi bi-clock" aria-hidden="true"></i></span><div><h3>Pending Payments</h3><strong>2</strong><p>Awaiting payment</p></div></article></section><section class="page-content"><div class="section-header"><h2>Recent Payments</h2><a class="text-link" href="${pageContext.request.contextPath}/owner/payments">View All <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div><div class="table-wrapper"><table class="data-table" ><thead><tr><th scope="col">#</th><th scope="col">Payment ID</th><th scope="col">Customer</th><th scope="col">Vehicle</th><th scope="col">Method</th><th scope="col">Amount (Rs.)</th><th scope="col">Status</th><th scope="col">Action</th></tr></thead><tbody data-filter-items><tr data-filter-item data-status="Paid" data-method="Card" data-month="October"><td>1</td><td>PAY-20261010-001</td><td>Nimal Perera</td><td>Toyota Corolla</td><td>Card</td><td>24,000</td><td><span class="badge badge-success" data-status-label>Paid</span></td><td><button type="button" class="btn btn-secondary" data-payment-details="1">View</button></td></tr>
+<tr data-filter-item data-status="Paid" data-method="Bank Transfer" data-month="October"><td>2</td><td>PAY-20261010-002</td><td>Sahan Wijesinghe</td><td>Yamaha FZ-S</td><td>Bank Transfer</td><td>7,000</td><td><span class="badge badge-success" data-status-label>Paid</span></td><td><button type="button" class="btn btn-secondary" data-payment-details="2">View</button></td></tr>
+<tr data-filter-item data-status="Refunded" data-method="eWallet" data-month="October"><td>3</td><td>PAY-20261010-003</td><td>Dinuka Silva</td><td>Toyota Hiace</td><td>eWallet</td><td>36,000</td><td><span class="badge badge-info" data-status-label>Refunded</span></td><td><button type="button" class="btn btn-secondary" data-payment-details="3">View</button></td></tr>
+<tr data-filter-item data-status="Pending" data-method="Card" data-month="September"><td>4</td><td>PAY-20261010-004</td><td>Kavindu Perera</td><td>Toyota RAV4</td><td>Card</td><td>30,000</td><td><span class="badge badge-warning" data-status-label>Pending</span></td><td><button type="button" class="btn btn-secondary" data-payment-details="4">View</button></td></tr>
+<tr data-filter-item data-status="Failed" data-method="eWallet" data-month="September"><td>5</td><td>PAY-20261010-005</td><td>Tharushi Fernando</td><td>Honda Civic</td><td>eWallet</td><td>18,000</td><td><span class="badge badge-danger" data-status-label>Failed</span></td><td><button type="button" class="btn btn-secondary" data-payment-details="5">View</button></td></tr></tbody></table></div></section>
+</main>
+<%@ include file="../common/footer.jsp" %>
+<%@ include file="../common/messages.jsp" %>
+</body></html>

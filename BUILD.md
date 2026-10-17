@@ -1,3 +1,13 @@
+# Current build and preview
+
+Use JDK 21 and `.\mvnw.cmd package`, then `.\mvnw.cmd spring-boot:run` from this directory. Open http://localhost:8080/login. The packaged WAR is `target/vehicle-rental-service-platform-0.0.1-SNAPSHOT.war`.
+
+The full frontend route list and QA evidence are in [FRONTEND-TASK1.md](FRONTEND-TASK1.md). `clean package` was also verified under Java 21 in an isolated copy because a pre-existing Windows ACL prevented cleaning an old directory in this original `target`. No Maven configuration changes were needed.
+
+---
+
+Historical scaffold build notes follow; their statements about missing controllers and expected 404s no longer describe the current project.
+
 # Build the Spring Boot scaffold
 
 The original README describes the earlier placeholder-only stage and has been

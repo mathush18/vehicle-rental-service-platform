@@ -1,55 +1,34 @@
-<%--
-=========================================
-MEMBER 1 - SHARED SIDEBAR
-Shared navigation shell for all members.
-No backend permissions or role logic yet.
-=========================================
---%>
-<aside class="app-sidebar" id="appSidebar" aria-label="Main sidebar">
-    <a class="sidebar-brand" href="${pageContext.request.contextPath}/">
-        <span class="brand-mark"><i class="bi bi-car-front-fill" aria-hidden="true"></i></span>
-        <span class="brand-copy">
-            <span class="brand-title">Drive<span>Hub</span></span>
-            <span class="brand-subtitle">Vehicle Rental Service</span>
-        </span>
-    </a>
-
-    <nav class="sidebar-nav" aria-label="Administration navigation">
-        <a class="sidebar-link is-active" href="${pageContext.request.contextPath}/dashboard">
-            <span class="sidebar-icon"><i class="bi bi-grid" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Dashboard</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/vehicles">
-            <span class="sidebar-icon"><i class="bi bi-car-front" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Vehicles</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/rentals">
-            <span class="sidebar-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Rentals</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/payments">
-            <span class="sidebar-icon"><i class="bi bi-credit-card" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Payments</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/branches">
-            <span class="sidebar-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Branches</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/reviews">
-            <span class="sidebar-icon"><i class="bi bi-star" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Reviews</span>
-        </a>
-        <a class="sidebar-link" href="${pageContext.request.contextPath}/users">
-            <span class="sidebar-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-            <span class="sidebar-label">Users</span>
-        </a>
-    </nav>
-
-    <section class="sidebar-promo" aria-label="Travel promotion">
-        <div>
-            <h3>Life is Better on the Road</h3>
-            <p>Explore new places with the vehicles you love.</p>
-        </div>
-    </section>
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:if test="${empty uiRole}"><c:set var="uiRole" value="customer" scope="request"/></c:if>
+<aside class="app-sidebar" id="appSidebar" aria-label="Main navigation">
+ <a class="sidebar-brand" href="${pageContext.request.contextPath}/${uiRole}/dashboard"><span class="brand-mark"><i class="bi bi-car-front-fill" aria-hidden="true"></i></span><span class="brand-copy"><span class="brand-title">DriveHub</span><span class="brand-subtitle">Vehicle Rental Service</span></span></a>
+ <nav class="sidebar-nav" aria-label="${uiRole} navigation">
+ <c:choose><c:when test="${uiRole == 'customer'}"><a class="sidebar-link ${navKey == 'dashboard' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/dashboard" aria-current="${navKey == 'dashboard' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-grid" aria-hidden="true"></i></span><span class="sidebar-label">Dashboard</span></a>
+<a class="sidebar-link ${navKey == 'vehicles' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/vehicles" aria-current="${navKey == 'vehicles' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-car-front" aria-hidden="true"></i></span><span class="sidebar-label">Browse Vehicles</span></a>
+<a class="sidebar-link ${navKey == 'rentals' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/rentals" aria-current="${navKey == 'rentals' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span><span class="sidebar-label">My Rentals</span></a>
+<a class="sidebar-link ${navKey == 'payments' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/payments" aria-current="${navKey == 'payments' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-credit-card" aria-hidden="true"></i></span><span class="sidebar-label">Payments</span></a>
+<a class="sidebar-link ${navKey == 'reviews' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/reviews" aria-current="${navKey == 'reviews' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-star" aria-hidden="true"></i></span><span class="sidebar-label">Reviews</span></a>
+<a class="sidebar-link ${navKey == 'branches' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/branches" aria-current="${navKey == 'branches' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><span class="sidebar-label">Branches</span></a>
+<a class="sidebar-link ${navKey == 'profile' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/customer/profile" aria-current="${navKey == 'profile' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-person" aria-hidden="true"></i></span><span class="sidebar-label">Profile</span></a></c:when>
+<c:when test="${uiRole == 'owner'}"><a class="sidebar-link ${navKey == 'dashboard' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/dashboard" aria-current="${navKey == 'dashboard' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-grid" aria-hidden="true"></i></span><span class="sidebar-label">Dashboard</span></a>
+<a class="sidebar-link ${navKey == 'vehicles' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/vehicles" aria-current="${navKey == 'vehicles' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-car-front" aria-hidden="true"></i></span><span class="sidebar-label">My Vehicles</span></a>
+<a class="sidebar-link ${navKey == 'vehicles/add' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/vehicles/add" aria-current="${navKey == 'vehicles/add' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-plus-circle" aria-hidden="true"></i></span><span class="sidebar-label">Add Vehicle</span></a>
+<a class="sidebar-link ${navKey == 'rental-requests' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/rental-requests" aria-current="${navKey == 'rental-requests' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-clipboard-check" aria-hidden="true"></i></span><span class="sidebar-label">Rental Requests</span></a>
+<a class="sidebar-link ${navKey == 'earnings' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/earnings" aria-current="${navKey == 'earnings' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-wallet2" aria-hidden="true"></i></span><span class="sidebar-label">Earnings</span></a>
+<a class="sidebar-link ${navKey == 'payments' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/payments" aria-current="${navKey == 'payments' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-credit-card" aria-hidden="true"></i></span><span class="sidebar-label">Payments</span></a>
+<a class="sidebar-link ${navKey == 'profile' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/owner/profile" aria-current="${navKey == 'profile' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-person" aria-hidden="true"></i></span><span class="sidebar-label">Profile</span></a></c:when>
+<c:when test="${uiRole == 'admin'}"><a class="sidebar-link ${navKey == 'dashboard' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/dashboard" aria-current="${navKey == 'dashboard' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-grid" aria-hidden="true"></i></span><span class="sidebar-label">Dashboard</span></a>
+<a class="sidebar-link ${navKey == 'users' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/users" aria-current="${navKey == 'users' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-people" aria-hidden="true"></i></span><span class="sidebar-label">Users</span></a>
+<a class="sidebar-link ${navKey == 'vehicles' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/vehicles" aria-current="${navKey == 'vehicles' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-car-front" aria-hidden="true"></i></span><span class="sidebar-label">Vehicles</span></a>
+<a class="sidebar-link ${navKey == 'rentals' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/rentals" aria-current="${navKey == 'rentals' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-calendar-check" aria-hidden="true"></i></span><span class="sidebar-label">Rentals</span></a>
+<a class="sidebar-link ${navKey == 'payments' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/payments" aria-current="${navKey == 'payments' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-credit-card" aria-hidden="true"></i></span><span class="sidebar-label">Payments</span></a>
+<a class="sidebar-link ${navKey == 'branches' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/branches" aria-current="${navKey == 'branches' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><span class="sidebar-label">Branches</span></a>
+<a class="sidebar-link ${navKey == 'reviews' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/reviews" aria-current="${navKey == 'reviews' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-star" aria-hidden="true"></i></span><span class="sidebar-label">Reviews</span></a>
+<a class="sidebar-link ${navKey == 'reports' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/reports" aria-current="${navKey == 'reports' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-bar-chart" aria-hidden="true"></i></span><span class="sidebar-label">Reports</span></a>
+<a class="sidebar-link ${navKey == 'profile' ? 'is-active' : ''}" href="${pageContext.request.contextPath}/admin/profile" aria-current="${navKey == 'profile' ? 'page' : 'false'}"><span class="sidebar-icon"><i class="bi bi-person" aria-hidden="true"></i></span><span class="sidebar-label">Profile</span></a></c:when></c:choose>
+ </nav>
+ <c:if test="${uiRole == 'owner'}"><a class="sidebar-promo" href="${pageContext.request.contextPath}/owner/vehicles/add"><div><h3>Grow Your Fleet</h3><p>List more vehicles and reach more customers.</p></div></a></c:if>
+ <a class="sidebar-help" href="${pageContext.request.contextPath}/instructions"><i class="bi bi-question-circle" aria-hidden="true"></i> <span class="sidebar-label">Help &amp; User Guide</span></a>
 </aside>
-<div class="sidebar-overlay" data-sidebar-close></div>
+<button type="button" class="sidebar-overlay" data-sidebar-close aria-label="Close navigation"></button>

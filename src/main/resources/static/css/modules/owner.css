@@ -1,0 +1,6 @@
+/* Owner accent follows the supplied fleet-management reference. */
+.role-owner { --primary: #5350e9; --primary-dark: #443ac4; }
+.role-owner .sidebar-link.is-active { background: linear-gradient(100deg, #7453f7, #5148e9); }
+.role-owner .dashboard-hero { min-height: 194px; }
+.role-owner .dashboard-hero p { max-width: 450px; margin-bottom: 0; }
+.role-owner .vehicle-image-wrap > .badge { top: auto; bottom: 7px; }

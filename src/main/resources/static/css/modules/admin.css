@@ -1,0 +1,8 @@
+/* Admin accent and denser dashboard match the supplied admin reference. */
+.role-admin { --primary: #514dff; --primary-dark: #413cda; }
+.role-admin .sidebar-link.is-active { background: linear-gradient(100deg, #7960ff, #5a4bff); }
+.role-admin .dashboard-hero { min-height: 160px; }
+.role-admin .dashboard-hero p { margin-bottom: 0; }
+.role-admin .stat-card strong { font-size: 18px; }
+.role-admin .vehicle-image-wrap > .badge { top: auto; bottom: 7px; }
+@media (max-width: 600px) { .role-admin .stat-card strong { font-size: 16px; } }

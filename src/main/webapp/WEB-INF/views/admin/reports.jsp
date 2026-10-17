@@ -1,0 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" session="false" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="uiRole" value="admin" scope="request"/>
+<c:set var="pageTitle" value="Reports & Analytics" scope="request"/>
+<c:set var="navKey" value="reports" scope="request"/>
+<!DOCTYPE html>
+<html lang="en"><head><%@ include file="../common/head.jsp" %></head>
+<body class="drivehub role-admin" data-role="admin" data-context="${pageContext.request.contextPath}" data-page="reports">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<%@ include file="../common/sidebar.jsp" %>
+<%@ include file="../common/navbar.jsp" %>
+<main class="app-main page-content" id="main-content">
+<%-- FRONTEND MOCK DATA: replace with backend model/JSTL later --%>
+<header class="page-header"><div class="page-heading"><i class="bi bi-bar-chart" aria-hidden="true"></i><div><h1>Reports &amp; Analytics</h1><p>View and manage all platform performance insights.</p></div></div></header><section class="stats-grid" aria-label="Summary statistics"><article class="stat-card"><span class="stat-icon purple"><i class="bi bi-cash-stack" aria-hidden="true"></i></span><div><h3>Total Revenue</h3><strong>Rs. 1,245,000</strong><p>+23% from last month</p></div></article><article class="stat-card"><span class="stat-icon cyan"><i class="bi bi-bag-check" aria-hidden="true"></i></span><div><h3>Total Rentals</h3><strong>96</strong><p>+16 this month</p></div></article><article class="stat-card"><span class="stat-icon green"><i class="bi bi-car-front" aria-hidden="true"></i></span><div><h3>Active Vehicles</h3><strong>38</strong><p>79% fleet availability</p></div></article><article class="stat-card"><span class="stat-icon yellow"><i class="bi bi-people" aria-hidden="true"></i></span><div><h3>New Users</h3><strong>24</strong><p>+8 from last month</p></div></article></section><section class="charts-grid"><article class="content-card"><div class="section-header"><h2>Monthly Revenue</h2><span class="chart-key"><i class="bi bi-square-fill" aria-hidden="true"></i> This Year</span></div><div class="bar-chart" role="img" aria-label="Monthly revenue in rupees: January 40,000; February 60,000; March 80,000; April 100,000; May 140,000; June 140,000; July 180,000; August 140,000; September 120,000; October 145,000"><span style="--bar:22%"></span><span style="--bar:33%"></span><span style="--bar:44%"></span><span style="--bar:55%"></span><span style="--bar:77%"></span><span style="--bar:77%"></span><span style="--bar:100%"></span><span style="--bar:77%"></span><span style="--bar:66%"></span><span style="--bar:80%"></span></div><div class="chart-months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></article><article class="content-card"><h2>Vehicle Type Distribution</h2><div class="donut-layout"><div class="donut" role="img" aria-label="48 vehicles: 20 cars, 12 vans, 8 SUVs, 8 motorcycles"><div><strong>48</strong><span>Vehicles</span></div></div><ul class="chart-legend"><li><span class="legend-dot blue"></span><span>Car</span><strong>20 (42%)</strong></li><li><span class="legend-dot cyan"></span><span>Van</span><strong>12 (25%)</strong></li><li><span class="legend-dot green"></span><span>SUV</span><strong>8 (17%)</strong></li><li><span class="legend-dot yellow"></span><span>Motorcycle</span><strong>8 (17%)</strong></li></ul></div></article></section>
+</main>
+<%@ include file="../common/footer.jsp" %>
+<%@ include file="../common/messages.jsp" %>
+</body></html>

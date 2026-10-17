@@ -1,0 +1,96 @@
+/* Login, registration and instructions, following the welcome reference. */
+.auth-page { background: #f6f9ff; }
+.auth-page .auth-scene { position: relative; isolation: isolate; min-height: 100vh; padding: 36px 6% 24px; background: linear-gradient(180deg,#e5eff9dd 0%,#dbe7f67a 30%,#172f46bd 73%,#152b41 100%),url('../../images/login-road-suv.png') center/cover; }
+.auth-page .auth-brand { display: inline-flex; align-items: center; gap: 14px; position: relative; z-index: 2; }
+.auth-page .auth-brand .brand-mark { width: 56px; height: 56px; font-size: 31px; border-radius: 13px; background: #2569f5; }
+.auth-page .auth-brand strong { display: block; font-size: 27px; line-height: 1.1; font-weight: 800; letter-spacing: -.9px; color: #081021; }
+.auth-page .auth-brand small { display: block; font-size: 12px; color: #34445e; margin-top: 4px; }
+.auth-page .auth-intro { margin: 44px 0 26px; position: relative; z-index: 2; }
+.auth-page .auth-intro h1 { color: #080d20; font-size: 45px; line-height: 1.12; letter-spacing: -1.5px; }
+.auth-page .auth-intro p { color: #46556b; font-size: 17px; margin-top: 15px; line-height: 1.5; }
+.auth-page .auth-card { width: min(490px,100%); padding: 31px 40px 30px; background: #fffffffa; box-shadow: 0 20px 65px #112b4020; border: 1px solid #ffffff; border-radius: 17px; margin: 0 auto; position: relative; z-index: 2; }
+.auth-page .auth-card header { text-align: center; margin-bottom: 27px; }
+.auth-page .auth-card h2 { font-size: 28px; letter-spacing: -.9px; color: #0b1225; }
+.auth-page .auth-card header p { font-size: 14px; margin-top: 5px; }
+.auth-page #login-form { display: grid; gap: 16px; }
+.auth-page .password-control { position: relative; }
+.auth-page .password-control > .bi { position: absolute; top: 13px; left: 15px; color: #758093; font-size: 20px; line-height: 1; }
+.auth-page .password-control .form-control { padding-left: 46px; padding-right: 42px; min-height: 47px; background: #fff; font-size: 14px; border-radius: 8px; border-color: #d4dae3; }
+.auth-page .password-toggle { position: absolute; top: 2px; right: 6px; height: 43px; width: 35px; border: 0; background: transparent; color: #66758a; font-size: 19px; cursor: pointer; }
+.auth-page .remember-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.auth-page .remember-row .check-row { margin: 0; font-size: 12px; }
+.auth-page .remember-row .btn { padding: 0; min-height: 28px; }
+.auth-page .auth-submit { width: 100%; min-height: 47px; font-size: 15px; background: #2465f5; border-radius: 7px; }
+.auth-page .auth-submit .bi { font-size: 20px; }
+.auth-page .auth-divider { display: flex; align-items: center; gap: 14px; margin: 24px 0 20px; color: #667085; font-size: 12px; }
+.auth-page .auth-divider::before, .auth-page .auth-divider::after { content: ''; height: 1px; background: #e9edf4; flex: 1; }
+.auth-page .login-roles { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; }
+.auth-page .login-role { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 106px; gap: 7px; padding: 13px 6px; text-align: center; border-radius: 10px; font-size: 13px; background: #eff5ff; }
+.auth-page .login-role > .bi { color: #2569f5; font-size: 27px; }
+.auth-page .login-role.owner { background: #edf9f3; }.auth-page .login-role.owner > .bi { color: #12ad68; }
+.auth-page .login-role.admin { background: #f5f1ff; }.auth-page .login-role.admin > .bi { color: #7541e8; }
+.auth-page .login-role:hover { box-shadow: 0 0 0 2px #8aa9ff; }
+.auth-page .auth-register { text-align: center; margin-top: 24px; font-size: 12px; }
+.auth-page .auth-register a { color: #1754dc; font-weight: 600; }
+.auth-page .auth-benefits { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px; margin: 40px auto 0; width: min(900px,100%); text-align: center; color: white; }
+.auth-page .auth-benefits article { padding: 0 15px; }
+.auth-page .auth-benefits article:not(:last-child) { border-right: 1px solid #ffffff25; }
+.auth-page .auth-benefits .bi { font-size: 29px; }
+.auth-page .auth-benefits h3 { color: #fff; margin: 6px 0; font-size: 15px; }
+.auth-page .auth-benefits p { color: #edf2f8; font-size: 12px; }
+.auth-page .auth-guide-link { display: block; width: fit-content; margin: 22px auto 0; color: #d7e3f5; font-size: 11px; }
+.auth-page .register-card { width: min(650px,100%); }.auth-page .register-card .form-grid { gap: 17px; }
+.auth-page .register-card input, .auth-page .register-card select { background: white; min-height: 43px; }
+.auth-page .register-card .password-control input { font-size: 12px; }.auth-page .register-card .check-row { flex-wrap: wrap; }
+.auth-page .instructions-main { width: min(1350px,100%); margin: auto; padding: 30px 38px 20px; }
+.auth-page .instructions-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 245px; margin: -30px -38px 0; padding: 30px 38px; background: linear-gradient(90deg,#f9fcff,#eaf4ff); }
+.auth-page .instructions-hero > div:not(.instructions-vehicle) { position: relative; z-index: 2; margin-top: 50px; }
+.auth-page .instructions-hero h1 { font-size: 36px; letter-spacing: -1px; }
+.auth-page .instructions-hero p { margin-top: 8px; font-size: 14px; }
+.auth-page .instructions-vehicle { position: absolute; z-index: -1; width: 50%; inset: 0 0 0 auto; background: linear-gradient(90deg,#eff6fd,transparent 35%),url('../../images/references/welcome.jpeg'); background-size: 100% 100%,502% 483%; background-position: center,100% 0; }
+.auth-page .account-types { padding: 23px; margin: 22px 0 30px; background: #eaf3ff; border-radius: 12px; }
+.auth-page .account-types h2, .auth-page .getting-started > h2, .auth-page .help-section > h2 { font-size: 22px; margin-bottom: 20px; color: #0d152a; }
+.auth-page .guide-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.auth-page .account-type { display: flex; align-items: center; gap: 15px; background: #ffffffec; border-radius: 12px; padding: 20px; }
+.auth-page .account-type p { margin-top: 7px; font-size: 12px; }.auth-page .account-type h3 { font-size: 16px; }
+.auth-page .account-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 auto; background: linear-gradient(135deg,#3d85ff,#2458ed); color: white; border-radius: 50%; font-size: 23px; }
+.auth-page .owner .account-icon { background: linear-gradient(135deg,#22c789,#00a45b); }.auth-page .admin .account-icon { background: linear-gradient(135deg,#9256ff,#6336e5); }
+.auth-page .guide-column { padding: 23px 18px; background: #f0f6ff; border-radius: 12px; }
+.auth-page .guide-column.owner { background: #effaf5; }.auth-page .guide-column.admin { background: #f6f2ff; }
+.auth-page .guide-column header { display: flex; gap: 12px; align-items: center; }.auth-page .guide-column header p { font-size: 11px; margin-top: 4px; }
+.auth-page .guide-column header .account-icon { width: 37px; height: 37px; font-size: 15px; }
+.auth-page .guide-column ol { padding: 0; margin: 26px 0 0; display: grid; gap: 23px; list-style: none; }
+.auth-page .guide-column li { display: flex; gap: 13px; align-items: flex-start; position: relative; }
+.auth-page .guide-column li:not(:last-child)::after { content: ''; position: absolute; width: 1px; height: calc(100% + 8px); top: 27px; left: 15px; background: #cfe0fa; z-index: 0; }
+.auth-page .step-icon { display: grid; place-items: center; width: 31px; height: 31px; flex-shrink: 0; border-radius: 8px; color: #286bf7; background: #e1ecff; font-size: 19px; z-index: 1; }
+.auth-page .owner .step-icon { color: #13a766; background: #dff6eb; }.auth-page .admin .step-icon { color: #7946ea; background: #eee5ff; }
+.auth-page .guide-column li strong { font-size: 12px; }.auth-page .guide-column li p { font-size: 11px; margin-top: 4px; }
+.auth-page .help-section { padding: 24px; margin-top: 30px; border-radius: 12px; background: #f0f3f8; }
+.auth-page .help-section > h2 { margin-bottom: 6px; }.auth-page .help-section > p { font-size: 13px; margin-bottom: 20px; }
+.auth-page .help-section .account-icon { border-radius: 12px; width: 43px; height: 43px; font-size: 23px; }
+.auth-page .help-section .account-type { padding: 17px; gap: 12px; }.auth-page .help-section h3 { font-size: 13px; }
+.auth-page .guide-footer { text-align: center; margin-top: 26px; }
+@media (min-width: 1000px) {
+ .auth-page .auth-scene { padding: 38px 6%; display: grid; grid-template-columns: minmax(0,1fr) minmax(400px,490px); gap: 20px 8%; }
+ .auth-page .auth-brand { grid-column: 1/-1; align-self: start; width: fit-content; }
+ .auth-page .auth-intro { align-self: center; margin: 0; padding-bottom: 90px; }.auth-page .auth-intro h1 { font-size: clamp(45px,4.4vw,65px); }
+ .auth-page .auth-intro p { color: #142640; max-width: 430px; }.auth-page .auth-card { grid-column: 2; grid-row: 2; }
+ .auth-page .auth-benefits { grid-column: 1/-1; margin-top: 20px; }.auth-page .auth-guide-link { grid-column: 1/-1; margin-top: 8px; }
+ .auth-page .register-scene { grid-template-columns: minmax(0,1fr) minmax(530px,650px); gap: 20px 5%; }
+}
+@media (max-width: 1000px) {
+ .auth-page .instructions-main { padding-inline: 24px; }.auth-page .instructions-hero { margin-inline: -24px; padding-inline: 24px; }.auth-page .account-type { padding: 16px; gap: 11px; }
+ .auth-page .account-type h3 { font-size: 14px; }.auth-page .account-icon { width: 38px; height: 38px; font-size: 20px; }.auth-page .guide-grid { gap: 12px; }
+ .auth-page .help-section .guide-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+ .auth-page .auth-scene { padding: 25px 20px; }.auth-page .auth-brand .brand-mark { width: 43px; height: 43px; font-size: 25px; }.auth-page .auth-brand strong { font-size: 23px; }.auth-page .auth-brand small { font-size: 10px; }
+ .auth-page .auth-intro { margin: 31px 0 24px; }.auth-page .auth-intro h1 { font-size: 36px; }.auth-page .auth-intro p { font-size: 14px; }.auth-page .auth-intro p br { display: none; }
+ .auth-page .auth-card { padding: 25px 20px; border-radius: 13px; }.auth-page .auth-card h2 { font-size: 26px; }.auth-page .auth-card header p { font-size: 12px; }.auth-page .auth-card header { margin-bottom: 22px; }
+ .auth-page .login-roles { gap: 8px; }.auth-page .login-role { font-size: 11px; min-height: 99px; }.auth-page .login-role > .bi { font-size: 25px; }
+ .auth-page .auth-benefits { gap: 18px; grid-template-columns: 1fr; margin-top: 28px; }.auth-page .auth-benefits article:not(:last-child) { border-right: 0; }.auth-page .auth-benefits article { padding-bottom: 8px; }.auth-page .auth-benefits p br { display: none; }
+ .auth-page .auth-benefits .bi { font-size: 24px; }.auth-page .remember-row .check-row, .auth-page .remember-row .text-link { font-size: 11px; }
+ .auth-page .instructions-main { padding: 22px 16px; }.auth-page .instructions-hero { margin: -22px -16px 0; padding: 22px 16px 28px; min-height: 255px; }.auth-page .instructions-hero h1 { font-size: 28px; }.auth-page .instructions-hero p { font-size: 12px; max-width: 260px; }.auth-page .instructions-vehicle { opacity: .6; width: 60%; }
+ .auth-page .instructions-hero > div:not(.instructions-vehicle) { margin-top: 40px; }.auth-page .guide-grid { grid-template-columns: 1fr; gap: 15px; }.auth-page .account-types { padding: 18px; }.auth-page .account-type { padding: 18px; }.auth-page .account-type h3 { font-size: 16px; }
+ .auth-page .account-types h2, .auth-page .getting-started > h2, .auth-page .help-section > h2 { font-size: 19px; }.auth-page .guide-column { padding: 24px; }.auth-page .help-section { padding: 18px; }
+}

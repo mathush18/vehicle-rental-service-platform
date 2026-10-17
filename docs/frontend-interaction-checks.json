@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": [
+    "Login visibility, role chooser and password recovery preview",
+    "Registration role restrictions and matching-password validation",
+    "Vehicle search, type filter, sorting, empty state and reset",
+    "Branch-to-vehicle filter navigation",
+    "Owner availability filter",
+    "Selected vehicle details, gallery selection and booking link",
+    "Vehicle form live preview, image upload and save preview",
+    "Vehicle edit population and image removal preview",
+    "Booking date validation, insurance calculation, steps, back navigation and confirmation",
+    "Customer rental status tabs",
+    "Rental details reflect selected booking and available actions",
+    "Review star interaction, validation and edit values",
+    "User pagination, filters and add/edit form previews",
+    "Owner request filter and approval preview",
+    "Payment filtering and selected payment details",
+    "Branch forms and selected branch details",
+    "Review moderation preview",
+    "Profile photo/form preview and keyboard dropdown dismissal",
+    "Global search navigation",
+    "Mobile sidebar toggle, keyboard close and overlay close",
+    "No POST/PUT/DELETE requests or browser script errors"
+  ],
+  "mutations": [],
+  "errors": []
+}
