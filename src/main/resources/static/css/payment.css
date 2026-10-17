@@ -1,0 +1,166 @@
+/*
+=========================================
+PAYMENT MODULE CSS
+Only extends the shared design system (style.css, layout.css, components.css).
+=========================================
+*/
+
+.payment-module {
+    display: grid;
+    align-content: start;
+    gap: 18px;
+}
+
+.payment-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.payment-head p {
+    margin: 4px 0 0;
+    color: var(--text-muted);
+}
+
+.payment-form-card {
+    width: min(640px, 100%);
+}
+
+.payment-form {
+    display: grid;
+    gap: 16px;
+}
+
+.payment-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min(640px, 100%);
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+}
+
+.payment-alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.payment-alert-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.payment-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.payment-search .input-with-icon {
+    flex: 1 1 260px;
+}
+
+.payment-search .form-select {
+    flex: 0 1 190px;
+}
+
+.payment-details {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 10px 16px;
+    margin: 0 0 22px;
+}
+
+.payment-details dt {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.payment-details dd {
+    margin: 0;
+    color: var(--text-primary);
+    overflow-wrap: anywhere;
+}
+
+.payment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.payment-actions form {
+    margin: 0;
+}
+
+.payment-small-btn {
+    min-height: 36px;
+    padding: 0 12px;
+}
+
+.payment-row-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.payment-row-actions form {
+    margin: 0;
+}
+
+.payment-note {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: #eef2ff;
+    color: #3730a3;
+    font-size: 0.92rem;
+}
+
+.payment-two {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.payment-link {
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.payment-methods label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.payment-summary {
+    display: grid;
+    gap: 6px;
+    margin: 0 0 18px;
+}
+
+@media (max-width: 640px) {
+    .payment-details {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .payment-details dd {
+        margin-bottom: 10px;
+    }
+
+    .payment-two {
+        grid-template-columns: 1fr;
+    }
+}
