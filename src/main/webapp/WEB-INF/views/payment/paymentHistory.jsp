@@ -2,13 +2,10 @@
     =========================================
     MEMBER 4 - PAYMENT MANAGEMENT
     Page: Payment History
-    Responsible for (future work):
-    - Payment CRUD
-    - Payment records
-    - Payment status
     =========================================
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +25,51 @@
     <main class="app-main page-content" id="main-content">
         <h1>Payment History</h1>
         <%@ include file="../common/messages.jsp" %>
-        <section>
-            <h2>History filter area</h2>
-            <%-- MEMBER 4: Future history filter area placeholder. --%>
-        </section>
-        <section>
+
+        <section class="card mb-4">
             <h2>Payment history list area</h2>
-            <%-- MEMBER 4: Future payment history list area placeholder. --%>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Rental ID</th>
+                            <th>Date</th>
+                            <th>Amount (LKR)</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="pay" items="${payments}">
+                            <tr>
+                                <td>${pay.paymentId}</td>
+                                <td>${pay.rentalId}</td>
+                                <td>${pay.paymentDate}</td>
+                                <td>${pay.amount}</td>
+                                <td>
+                                    <c:choose>
+                                        <c:when test="${pay['class'].simpleName == 'CardPayment'}">CARD</c:when>
+                                        <c:otherwise>CASH</c:otherwise>
+                                    </c:choose>
+                                </td>
+                                <td>
+                                    <span class="badge status-${pay.status.toLowerCase()}">${pay.status}</span>
+                                </td>
+                                <td>
+                                    <a href="${pageContext.request.contextPath}/payments/${pay.paymentId}" class="btn btn-sm btn-outline-primary">View</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                        <c:if test="${empty payments}">
+                            <tr>
+                                <td colspan="7" class="text-center">No payment history found.</td>
+                            </tr>
+                        </c:if>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <%@ include file="../common/footer.jsp" %>
