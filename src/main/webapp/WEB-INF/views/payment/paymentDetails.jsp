@@ -2,13 +2,10 @@
     =========================================
     MEMBER 4 - PAYMENT MANAGEMENT
     Page: Payment Details
-    Responsible for (future work):
-    - Payment CRUD
-    - Payment records
-    - Payment status
     =========================================
 --%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +16,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layout.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/components.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/modules/payment.css">
     <script src="${pageContext.request.contextPath}/js/app.js" defer></script>
 </head>
 <body>
@@ -28,18 +24,46 @@
     <main class="app-main page-content" id="main-content">
         <h1>Payment Details</h1>
         <%@ include file="../common/messages.jsp" %>
-        <section>
-            <h2>Payment information area</h2>
-            <%-- MEMBER 4: Future payment information area placeholder. --%>
+
+        <section class="card mb-4">
+            <h2>Payment Information</h2>
+            <table class="table">
+                <tr><th>Payment ID:</th><td>${payment.paymentId}</td></tr>
+                <tr><th>Amount:</th><td>LKR ${payment.amount}</td></tr>
+                <tr><th>Date:</th><td>${payment.paymentDate}</td></tr>
+                <tr><th>Status:</th>
+                    <td><span class="badge status-${payment.status.toLowerCase()}">${payment.status}</span></td>
+                </tr>
+                <tr><th>Method:</th>
+                    <td>
+                        <c:choose>
+                            <c:when test="${payment['class'].simpleName == 'CardPayment'}">
+                                Card (Ending in ${payment.cardNumber})
+                            </c:when>
+                            <c:otherwise>
+                                Cash (Receipt: ${payment.receiptNumber})
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                </tr>
+            </table>
         </section>
-        <section>
-            <h2>Rental reference area</h2>
-            <%-- MEMBER 4: Future rental reference area placeholder. --%>
+
+        <section class="card mb-4">
+            <h2>Rental Reference</h2>
+            <p><strong>Rental ID:</strong> ${payment.rentalId}</p>
+            <p><strong>Customer Name:</strong> ${customer.firstName} ${customer.lastName}</p>
         </section>
-        <section>
-            <h2>Payment status area</h2>
-            <%-- MEMBER 4: Future payment status area placeholder. --%>
-        </section>
+
+        <div class="mt-3">
+            <c:if test="${isAdmin}">
+                <a href="${pageContext.request.contextPath}/payments/${payment.paymentId}/edit" class="btn btn-warning">Edit Status</a>
+                <a href="${pageContext.request.contextPath}/payments" class="btn btn-outline-secondary">Back to List</a>
+            </c:if>
+            <c:if test="${!isAdmin}">
+                <a href="${pageContext.request.contextPath}/payments/history" class="btn btn-outline-secondary">Back to History</a>
+            </c:if>
+        </div>
     </main>
     <%@ include file="../common/footer.jsp" %>
 </body>
